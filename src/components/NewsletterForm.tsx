@@ -46,7 +46,7 @@ export const NewsletterForm = ({ delay = 0.6 }: { delay?: number }) => {
                   setError("");
                 }}
                 placeholder="name@email.com"
-                className="w-full h-10 px-4 rounded-md bg-white dark:bg-[#121212] border border-[#ebebeb] dark:border-neutral-800 focus:border-[#a1a1a1] dark:focus:border-neutral-700 text-[#171717] dark:text-white placeholder-[#888888] dark:placeholder-neutral-500 text-sm focus:outline-none transition-all duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.02)] dark:shadow-none"
+                className="w-full h-10 px-4 rounded bg-white dark:bg-[#121212] border border-[#ebebeb] dark:border-neutral-900 focus:border-[#a1a1a1] dark:focus:border-neutral-700 text-[#171717] dark:text-white placeholder-[#888888] dark:placeholder-neutral-500 text-sm focus:outline-none transition-all duration-200 shadow-sm"
               />
               {error && (
                 <span className="absolute -bottom-5 left-0 text-[11px] text-red-600 font-mono">
@@ -56,7 +56,7 @@ export const NewsletterForm = ({ delay = 0.6 }: { delay?: number }) => {
             </div>
             <button
               type="submit"
-              className="h-10 px-5 rounded-md bg-[#171717] dark:bg-white hover:bg-[#171717]/90 dark:hover:bg-white/90 active:bg-black dark:active:bg-white/80 text-white dark:text-black text-sm font-medium transition-all duration-200 cursor-pointer shadow-md dark:shadow-none"
+              className="h-10 px-5 rounded bg-[#171717] dark:bg-white hover:bg-black/90 dark:hover:bg-white/90 active:bg-black dark:active:bg-white/80 text-white dark:text-black text-sm font-semibold transition-all duration-200 cursor-pointer shadow-sm"
             >
               Sign up
             </button>

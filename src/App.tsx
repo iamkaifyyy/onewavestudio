@@ -5,6 +5,7 @@ import { InfinityLogo } from "@/components/InfinityLogo";
 import { SocialBadges } from "@/components/SocialBadges";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { SaaSGrid } from "@/components/SaaSGrid";
+import { DocsPage } from "@/components/DocsPage";
 
 // Custom handles configured at the app level
 const SOCIAL_HANDLES = {
@@ -13,7 +14,7 @@ const SOCIAL_HANDLES = {
   portfolio: "kaifyyy-sh.vercel.app",
 };
 
-type ViewType = "home" | "status" | "privacy" | "terms" | "build";
+type ViewType = "home" | "status" | "privacy" | "terms" | "build" | "docs";
 
 const App = () => {
   const line1 = "An ecosystem of ambitious products";
@@ -151,8 +152,15 @@ const App = () => {
           </span>
         </button>
 
-        <button
-          onClick={toggleTheme}
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => setView("docs")}
+            className="hidden sm:block text-xs font-mono text-[#4d4d4d] dark:text-neutral-400 hover:text-[#171717] dark:hover:text-white transition-colors cursor-pointer bg-transparent border-0 p-0"
+          >
+            Docs
+          </button>
+          <button
+            onClick={toggleTheme}
           className="p-2 rounded-md hover:bg-neutral-100 dark:hover:bg-[#121212] border border-transparent hover:border-[#ebebeb] dark:hover:border-neutral-900 text-[#4d4d4d] dark:text-neutral-400 hover:text-[#171717] dark:hover:text-white transition-all cursor-pointer"
           aria-label="Toggle theme"
         >
@@ -162,6 +170,7 @@ const App = () => {
             <Sun className="w-[18px] h-[18px]" />
           )}
         </button>
+      </div>
       </header>
 
       {/* Main viewport region */}
@@ -217,6 +226,20 @@ const App = () => {
               <NewsletterForm delay={0.6} />
 
               <SaaSGrid onInitiateBuild={handleInitiateBuild} />
+            </motion.div>
+          )}
+
+          {/* DOCS VIEW */}
+          {view === "docs" && (
+            <motion.div
+              key="docs"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="w-full"
+            >
+              <DocsPage onBack={() => setView("home")} />
             </motion.div>
           )}
 
@@ -535,6 +558,7 @@ const App = () => {
           </div>
 
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[11px] text-[#4d4d4d] dark:text-neutral-400">
+            <button onClick={() => setView("docs")} className="bg-transparent border-0 p-0 hover:text-[#171717] dark:hover:text-white transition-colors cursor-pointer font-mono">Docs</button>
             <button onClick={() => setView("status")} className="bg-transparent border-0 p-0 hover:text-[#171717] dark:hover:text-white transition-colors cursor-pointer font-mono">Status</button>
             <button onClick={() => setView("privacy")} className="bg-transparent border-0 p-0 hover:text-[#171717] dark:hover:text-white transition-colors cursor-pointer font-mono">Privacy</button>
             <button onClick={() => setView("terms")} className="bg-transparent border-0 p-0 hover:text-[#171717] dark:hover:text-white transition-colors cursor-pointer font-mono">Terms</button>

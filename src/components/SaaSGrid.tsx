@@ -113,7 +113,7 @@ ${featureLabels || "- Core database & configuration setup."}
       </div>
 
       {/* Scoping Console Main Box */}
-      <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-5 gap-8 bg-white dark:bg-gradient-to-b dark:from-[#0a0a0a] dark:to-[#040404] border border-[#ebebeb] dark:border-neutral-900 p-6 md:p-8 rounded-xl shadow-[0_1px_3px_rgba(0,0,0,0.02),0_0_0_1px_rgba(0,0,0,0.02)] dark:shadow-[0_4px_12px_rgba(0,0,0,0.5)] transition-all duration-300">
+      <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-5 gap-8 bg-white dark:bg-[#0a0a0a] border border-[#ebebeb] dark:border-neutral-900 p-6 md:p-8 rounded-lg shadow-[0_2px_12px_rgba(0,0,0,0.02)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.5)] transition-all duration-300">
         
         {/* Left Control Console (2/5 Span) */}
         <div className="md:col-span-2 flex flex-col justify-between border-b md:border-b-0 md:border-r border-[#ebebeb] dark:border-neutral-900 pb-6 md:pb-0 md:pr-8">
@@ -124,7 +124,7 @@ ${featureLabels || "- Core database & configuration setup."}
 
             {/* Project Name */}
             <div className="mb-4">
-              <label className="block text-xs font-mono text-[#888888] dark:text-neutral-500 mb-2 uppercase">
+              <label className="block text-[10px] font-mono text-neutral-400 dark:text-neutral-500 mb-2 uppercase tracking-wider">
                 SaaS App Name
               </label>
               <input
@@ -132,13 +132,13 @@ ${featureLabels || "- Core database & configuration setup."}
                 value={projectName}
                 onChange={(e) => setProjectName(e.target.value)}
                 placeholder="e.g. WaveLaunch"
-                className="w-full h-10 px-3 rounded-md bg-[#fafafa] dark:bg-neutral-950 border border-[#ebebeb] dark:border-neutral-800 text-[#171717] dark:text-white placeholder-[#888888]/60 dark:placeholder-neutral-600 text-sm focus:outline-none focus:border-[#a1a1a1] dark:focus:border-neutral-700 transition-colors"
+                className="w-full h-10 px-3 rounded bg-white dark:bg-neutral-950 border border-[#ebebeb] dark:border-neutral-900 text-[#171717] dark:text-white placeholder-[#888888]/60 dark:placeholder-neutral-600 text-sm focus:outline-none focus:border-[#a1a1a1] dark:focus:border-neutral-700 transition-colors shadow-sm"
               />
             </div>
 
             {/* Concept Value Proposition */}
             <div className="mb-5">
-              <label className="block text-xs font-mono text-[#888888] dark:text-neutral-500 mb-2 uppercase">
+              <label className="block text-[10px] font-mono text-neutral-400 dark:text-neutral-500 mb-2 uppercase tracking-wider">
                 Core Concept
               </label>
               <textarea
@@ -146,13 +146,13 @@ ${featureLabels || "- Core database & configuration setup."}
                 onChange={(e) => setProjectConcept(e.target.value)}
                 placeholder="Describe what the application will accomplish..."
                 rows={2}
-                className="w-full p-3 rounded-md bg-[#fafafa] dark:bg-neutral-950 border border-[#ebebeb] dark:border-neutral-800 text-[#171717] dark:text-white placeholder-[#888888]/60 dark:placeholder-neutral-600 text-sm focus:outline-none focus:border-[#a1a1a1] dark:focus:border-neutral-700 transition-colors resize-none"
+                className="w-full p-3 rounded bg-white dark:bg-neutral-950 border border-[#ebebeb] dark:border-neutral-900 text-[#171717] dark:text-white placeholder-[#888888]/60 dark:placeholder-neutral-600 text-sm focus:outline-none focus:border-[#a1a1a1] dark:focus:border-neutral-700 transition-colors resize-none shadow-sm"
               />
             </div>
 
             {/* Feature Checklist Selector */}
             <div className="mb-5">
-              <label className="block text-xs font-mono text-[#888888] dark:text-neutral-500 mb-2.5 uppercase">
+              <label className="block text-[10px] font-mono text-neutral-400 dark:text-neutral-500 mb-2.5 uppercase tracking-wider">
                 Scope Features
               </label>
               <div className="flex flex-col gap-2">
@@ -163,20 +163,20 @@ ${featureLabels || "- Core database & configuration setup."}
                     <button
                       key={feat.id}
                       onClick={() => toggleFeature(feat.id)}
-                      className={`w-full flex items-start gap-3 p-2.5 rounded-lg border text-left cursor-pointer transition-all ${
+                      className={`w-full flex items-start gap-3 p-2.5 rounded border text-left cursor-pointer transition-all ${
                         isSelected
-                          ? "bg-[#0070f3]/5 dark:bg-cyan-500/5 border-[#0070f3]/40 dark:border-cyan-500/30"
-                          : "bg-transparent border-[#ebebeb] dark:border-neutral-900 hover:bg-[#fafafa] dark:hover:bg-neutral-950/60"
+                          ? "bg-neutral-50 dark:bg-neutral-950 border-neutral-300 dark:border-neutral-800"
+                          : "bg-white dark:bg-[#0a0a0a] border-[#ebebeb] dark:border-neutral-900 hover:bg-[#fafafa] dark:hover:bg-neutral-950/60"
                       }`}
                     >
-                      <div className={`mt-0.5 p-1 rounded bg-[#fafafa] dark:bg-neutral-900 border border-[#ebebeb] dark:border-neutral-800 ${isSelected ? "text-[#0070f3] dark:text-cyan-400" : "text-neutral-400 dark:text-neutral-500"}`}>
+                      <div className={`mt-0.5 p-1 rounded bg-[#fafafa] dark:bg-neutral-900 border border-[#ebebeb] dark:border-neutral-800 ${isSelected ? "text-[#0070f3] dark:text-cyan-400" : "text-neutral-450 dark:text-neutral-500"}`}>
                         <FeatIcon className="w-3.5 h-3.5" />
                       </div>
                       <div>
-                        <div className={`text-xs font-medium ${isSelected ? "text-[#0070f3] dark:text-cyan-400" : "text-[#171717] dark:text-neutral-300"}`}>
+                        <div className={`text-xs font-semibold ${isSelected ? "text-[#171717] dark:text-white" : "text-[#4d4d4d] dark:text-neutral-350"}`}>
                           {feat.label}
                         </div>
-                        <div className="text-[10px] text-[#888888] dark:text-neutral-500 mt-0.5 leading-normal">
+                        <div className="text-[10px] text-[#888888] dark:text-neutral-500 mt-0.5 leading-normal font-light">
                           {feat.desc}
                         </div>
                       </div>
@@ -188,26 +188,26 @@ ${featureLabels || "- Core database & configuration setup."}
 
             {/* Velocity Priority Selector */}
             <div className="mb-6">
-              <label className="block text-xs font-mono text-[#888888] dark:text-neutral-500 mb-2 uppercase">
+              <label className="block text-[10px] font-mono text-neutral-400 dark:text-neutral-500 mb-2 uppercase tracking-wider">
                 Delivery Velocity
               </label>
               <div className="grid grid-cols-2 gap-2">
                 <button
                   onClick={() => setVelocity("standard")}
-                  className={`h-9 rounded-md border text-xs font-medium cursor-pointer transition-all ${
+                  className={`h-9 rounded border text-xs font-medium cursor-pointer transition-all ${
                     velocity === "standard"
-                      ? "bg-[#171717] text-white dark:bg-white dark:text-black border-transparent"
-                      : "bg-[#fafafa] dark:bg-neutral-950 border-[#ebebeb] dark:border-neutral-900 text-[#4d4d4d] dark:text-neutral-400 hover:bg-[#fafafa]"
+                      ? "bg-[#171717] text-white dark:bg-white dark:text-black border-transparent shadow-sm"
+                      : "bg-white dark:bg-[#0a0a0a] border-[#ebebeb] dark:border-neutral-900 text-[#4d4d4d] dark:text-neutral-400 hover:bg-[#fafafa] dark:hover:bg-neutral-950/60"
                   }`}
                 >
                   Standard
                 </button>
                 <button
                   onClick={() => setVelocity("expedited")}
-                  className={`h-9 rounded-md border text-xs font-medium cursor-pointer transition-all ${
+                  className={`h-9 rounded border text-xs font-medium cursor-pointer transition-all ${
                     velocity === "expedited"
-                      ? "bg-[#171717] text-white dark:bg-white dark:text-black border-transparent"
-                      : "bg-[#fafafa] dark:bg-neutral-950 border-[#ebebeb] dark:border-neutral-900 text-[#4d4d4d] dark:text-neutral-400 hover:bg-[#fafafa]"
+                      ? "bg-[#171717] text-white dark:bg-white dark:text-black border-transparent shadow-sm"
+                      : "bg-white dark:bg-[#0a0a0a] border-[#ebebeb] dark:border-neutral-900 text-[#4d4d4d] dark:text-neutral-400 hover:bg-[#fafafa] dark:hover:bg-neutral-950/60"
                   }`}
                 >
                   Expedited (+25%)
@@ -338,7 +338,7 @@ ${featureLabels || "- Core database & configuration setup."}
             
             <button
               onClick={() => onInitiateBuild(generateProposal())}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-[#0070f3] hover:bg-[#0070f3]/90 active:bg-blue-700 text-white font-medium text-xs rounded-md shadow-sm transition-all duration-200 cursor-pointer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#171717] dark:bg-white text-white dark:text-black font-semibold text-xs rounded hover:bg-black/90 dark:hover:bg-white/90 transition-all duration-200 cursor-pointer shadow-sm"
             >
               <Send className="w-3.5 h-3.5" />
               <span>Submit Scope proposal</span>
