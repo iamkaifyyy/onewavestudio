@@ -13,9 +13,9 @@ interface SocialBadgesProps {
 
 export const SocialBadges = ({ handles, delay = 0.5 }: SocialBadgesProps) => {
   const links = {
-    linkedin: `https://linkedin.com/in/${handles.linkedin}`,
-    twitter: `https://x.com/${handles.twitter}`,
-    portfolio: `https://${handles.portfolio}`,
+    linkedin: handles.linkedin.startsWith("http") ? handles.linkedin : `https://linkedin.com/in/${handles.linkedin}`,
+    twitter: handles.twitter.startsWith("http") ? handles.twitter : `https://x.com/${handles.twitter}`,
+    portfolio: handles.portfolio.startsWith("http") ? handles.portfolio : `https://${handles.portfolio}`,
   };
 
   return (

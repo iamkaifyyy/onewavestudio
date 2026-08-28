@@ -1,9 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46" fill="none">
   <style>
     path { stroke: #171717; }
     @media (prefers-color-scheme: dark) {
       path { stroke: #ffffff; }
     }
   </style>
-  <path d="M6 16c5 0 7-8 12-8a4 4 0 0 1 0 8c-5 0-7-8-12-8a4 4 0 1 0 0 8"/>
+  <g transform="translate(0, 9)">
+    <path d="M11 6C6.58 6 3 9.58 3 14C3 18.42 6.58 22 11 22C15.42 22 19 18.42 23 14C27 9.58 30.58 6 35 6C39.42 6 43 9.58 43 14C43 18.42 39.42 22 35 22C30.58 22 27 18.42 23 14C19 9.58 15.42 6 11 6Z" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
 </svg>
