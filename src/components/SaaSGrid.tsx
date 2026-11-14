@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Sparkles, Copy, Check, ShieldCheck, CreditCard, BrainCircuit, BarChart3, MessageSquare, Send, Calculator, FileText } from "lucide-react";
+import { Sparkles, Copy, Check, ShieldCheck, CreditCard, BrainCircuit, BarChart3, MessageSquare, Calculator, FileText } from "lucide-react";
 
 type FeatureId = "auth" | "stripe" | "ai" | "analytics" | "chat";
 
@@ -21,7 +21,7 @@ const FEATURE_OPTIONS: FeatureOption[] = [
 ];
 
 interface SaaSGridProps {
-  onInitiateBuild: (proposalText: string) => void;
+  onInitiateBuild?: (proposalText: string) => void;
 }
 
 export const SaaSGrid = ({ onInitiateBuild }: SaaSGridProps) => {
@@ -330,20 +330,6 @@ ${featureLabels || "- Core database & configuration setup."}
 
           </div>
 
-          {/* Lead Generation CTA Card */}
-          <div className="mt-4 pt-4 border-t border-[#ebebeb] dark:border-neutral-900 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-[10px] text-[#888888] dark:text-neutral-500 font-sans leading-normal max-w-sm text-center sm:text-left">
-              Satisfied with this proposal and budget? Click below to send this scope directly to Mohd Kaif to kickstart development.
-            </div>
-            
-            <button
-              onClick={() => onInitiateBuild(generateProposal())}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-[#171717] dark:bg-white text-white dark:text-black font-semibold text-xs rounded hover:bg-black/90 dark:hover:bg-white/90 transition-all duration-200 cursor-pointer shadow-sm"
-            >
-              <Send className="w-3.5 h-3.5" />
-              <span>Submit Scope proposal</span>
-            </button>
-          </div>
 
         </div>
 

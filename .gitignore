@@ -54,3 +54,4 @@ out
 *.sln
 *.sw?
 Thumbs.db
+.originkit/

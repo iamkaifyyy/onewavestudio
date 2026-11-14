@@ -11,7 +11,7 @@ import { DocsPage } from "@/components/DocsPage";
 const SOCIAL_HANDLES = {
   linkedin: "iamkaifyyy",
   twitter: "Iamkaifyyy",
-  portfolio: "kaify-phi.vercel.app",
+  portfolio: "kaify-dev.vercel.app",
 };
 
 type ViewType = "home" | "status" | "privacy" | "terms" | "build" | "docs";
