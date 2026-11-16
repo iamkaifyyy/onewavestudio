@@ -4,7 +4,6 @@ import { Sun, Moon, ArrowLeft, Send, CheckCircle2, Server, Activity, ArrowUpRigh
 import { InfinityLogo } from "@/components/InfinityLogo";
 import { SocialBadges } from "@/components/SocialBadges";
 import { NewsletterForm } from "@/components/NewsletterForm";
-import { SaaSGrid } from "@/components/SaaSGrid";
 import { DocsPage } from "@/components/DocsPage";
 
 // Custom handles configured at the app level
@@ -54,12 +53,6 @@ const App = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [view]);
-
-  // Prefill the scoping text box and redirect
-  const handleInitiateBuild = (proposalText: string) => {
-    setClientScope(proposalText);
-    setView("build");
-  };
 
   const toggleTheme = () => {
     const nextTheme = theme === "light" ? "dark" : "light";
@@ -224,8 +217,6 @@ const App = () => {
               </motion.p>
 
               <NewsletterForm delay={0.6} />
-
-              <SaaSGrid onInitiateBuild={handleInitiateBuild} />
             </motion.div>
           )}
 

@@ -24,7 +24,7 @@ interface SaaSGridProps {
   onInitiateBuild?: (proposalText: string) => void;
 }
 
-export const SaaSGrid = ({ onInitiateBuild }: SaaSGridProps) => {
+export const SaaSGrid = ({ onInitiateBuild: _onInitiateBuild }: SaaSGridProps = {}) => {
   const [projectName, setProjectName] = useState("My Next SaaS");
   const [projectConcept, setProjectConcept] = useState("A modern workflow utility to increase builder performance");
   const [selectedFeatures, setSelectedFeatures] = useState<FeatureId[]>(["auth", "stripe"]);
