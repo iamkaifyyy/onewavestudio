@@ -131,7 +131,7 @@ ${featureLabels || "- Core database & configuration setup."}
                 type="text"
                 value={projectName}
                 onChange={(e) => setProjectName(e.target.value)}
-                placeholder="e.g. WaveLaunch"
+                placeholder="e.g. ynzLaunch"
                 className="w-full h-10 px-3 rounded bg-white dark:bg-neutral-950 border border-[#ebebeb] dark:border-neutral-900 text-[#171717] dark:text-white placeholder-[#888888]/60 dark:placeholder-neutral-600 text-sm focus:outline-none focus:border-[#a1a1a1] dark:focus:border-neutral-700 transition-colors shadow-sm"
               />
             </div>

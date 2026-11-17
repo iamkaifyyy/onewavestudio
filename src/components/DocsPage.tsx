@@ -1132,7 +1132,7 @@ export const DocsPage = ({ onBack }: DocsPageProps) => {
 
         <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-neutral-900 border border-[#ebebeb] dark:border-neutral-800 text-[10px] uppercase font-mono tracking-widest text-[#4d4d4d] dark:text-neutral-400 mb-4 w-fit">
           <BookOpen className="w-3 h-3 text-[#0070f3] dark:text-cyan-400" />
-          <span>Onewave SaaS Kit</span>
+          <span>ynz studio SaaS Kit</span>
         </div>
 
         <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#171717] dark:text-white mb-3">
@@ -1179,7 +1179,7 @@ export const DocsPage = ({ onBack }: DocsPageProps) => {
         <div className="flex items-center gap-3 px-4 py-3 rounded-lg bg-[#0a0a0a] dark:bg-neutral-950 border border-neutral-800 max-w-full overflow-x-auto">
           <Terminal className="w-4 h-4 text-cyan-400 shrink-0" />
           <code className="text-cyan-300 font-mono text-xs sm:text-sm whitespace-nowrap flex-1">
-            npx create-onewave-app@latest my-saas
+            npx create-ynz-app@latest my-saas
           </code>
           <span className="shrink-0 text-[9px] font-mono px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">
             COMING SOON
@@ -1442,11 +1442,11 @@ export const DocsPage = ({ onBack }: DocsPageProps) => {
                 </div>
                 <div className="p-3.5 bg-[#0a0a0a] rounded border border-neutral-800 flex items-center justify-between overflow-x-auto">
                   <code className="text-cyan-300 font-mono text-xs whitespace-nowrap">
-                    npx onewave add {currentItem.slug} --stack={activeStack}
+                    npx ynz add {currentItem.slug} --stack={activeStack}
                   </code>
                   <button
                     onClick={() => {
-                      navigator.clipboard.writeText(`npx onewave add ${currentItem.slug} --stack=${activeStack}`);
+                      navigator.clipboard.writeText(`npx ynz add ${currentItem.slug} --stack=${activeStack}`);
                       setExpandedPrd("cmd-copied");
                       setTimeout(() => setExpandedPrd(null), 2000);
                     }}
@@ -1511,7 +1511,7 @@ export const DocsPage = ({ onBack }: DocsPageProps) => {
                 <div className="flex items-center gap-3 px-4 py-3 rounded-lg bg-[#0a0a0a] dark:bg-neutral-950 border border-neutral-800 overflow-x-auto">
                   <Terminal className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
                   <code className="text-cyan-300/60 font-mono text-xs whitespace-nowrap flex-1">
-                    npx onewave add {currentItem.slug} --stack={activeStack}
+                    npx ynz add {currentItem.slug} --stack={activeStack}
                   </code>
                   <span className="shrink-0 text-[9px] font-mono px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">
                     COMING SOON
